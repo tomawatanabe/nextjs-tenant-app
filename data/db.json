@@ -1,8 +1,28 @@
 {
   "items": [
     {
-      "name": "商品1",
-      "id": 1
+      "id": 1,
+      "name": "ピザ",
+      "description": "ピザです",
+      "price": 2000,
+      "imageURL": "#",
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "name": "パスタ",
+      "description": "パスタです",
+      "price": 1200,
+      "imageURL": "#",
+      "deleted": false
+    },
+    {
+      "name": "商品名サンプル",
+      "description": "説明文サンプル",
+      "price": 99999,
+      "imageURL": "##",
+      "deleted": false,
+      "id": 3
     }
   ]
 }
