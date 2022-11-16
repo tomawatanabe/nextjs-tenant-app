@@ -22,15 +22,29 @@ const ItemList = () => {
       <tbody>
         {data.map((item) => {
           return (
-            <tr key={item.id}>
+            <tr
+              key={item.id}
+              id={item.id}
+              style={{ display: item.deleted ? "none" : "table-row" }}
+            >
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.description}</td>
               <td>
-                <Link href='../pages/[id]'>詳細/更新</Link>
+                <Link href={`../posts/${item.id}`}>詳細/更新</Link>
               </td>
               <td>
-                <button>削除</button>
+                <button
+                  onClick={() => {
+                    fetch(`http://localhost:3000/api/items/${item.id}`, {
+                      method: "PATCH",
+                      body: JSON.stringify({ deleted: true }),
+                      headers: { "Content-Type": "application/json" },
+                    });
+                  }}
+                >
+                  削除
+                </button>
               </td>
             </tr>
           );

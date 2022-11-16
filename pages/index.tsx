@@ -10,7 +10,7 @@ const Page = () => {
         <title>商品一覧</title>
       </Head>
       <Link href="/create">
-        新規登録
+        商品登録はこちら
       </Link>
       <ItemList />
     </>

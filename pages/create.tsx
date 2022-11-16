@@ -42,13 +42,13 @@ const Create = () => {
   const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
     postData();
     alert("商品を登録しました");
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   return (
     <>
       <form action="">
-        <legend>＜新規登録＞</legend>
+        <legend>商品登録</legend>
         <label htmlFor="item-name">商品名：</label>
         <input
           type="text"

@@ -6,7 +6,7 @@
       "description": "ピザです",
       "price": 2000,
       "imageURL": "#",
-      "deleted": false
+      "deleted": true
     },
     {
       "id": 2,
@@ -17,12 +17,52 @@
       "deleted": false
     },
     {
-      "name": "商品名サンプル",
-      "description": "説明文サンプル",
-      "price": 99999,
-      "imageURL": "##",
+      "name": "サンプル商品名",
+      "description": "サンプル説明文",
+      "price": 9999,
+      "imageURL": "###",
       "deleted": false,
       "id": 3
+    },
+    {
+      "name": "サンプル商品名",
+      "description": "サンプル説明文",
+      "price": 9999,
+      "imageURL": "###",
+      "deleted": false,
+      "id": 4
+    },
+    {
+      "name": "サンプル商品名",
+      "description": "サンプル説明文",
+      "price": 9999,
+      "imageURL": "###",
+      "deleted": true,
+      "id": 5
+    },
+    {
+      "name": "ドリア",
+      "description": "おいしいドリアです",
+      "price": 800,
+      "imageURL": "##",
+      "deleted": true,
+      "id": 6
+    },
+    {
+      "name": "ドリア",
+      "description": "おいしいドリアです",
+      "price": 800,
+      "imageURL": "##",
+      "deleted": true,
+      "id": 7
+    },
+    {
+      "name": "sample",
+      "description": "sample",
+      "price": 8988,
+      "imageURL": "sample",
+      "deleted": true,
+      "id": 8
     }
   ]
 }
