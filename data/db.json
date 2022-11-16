@@ -14,14 +14,14 @@
       "description": "パスタです",
       "price": 1200,
       "imageURL": "#",
-      "deleted": false
+      "deleted": true
     },
     {
       "name": "サンプル商品名",
       "description": "サンプル説明文",
       "price": 9999,
       "imageURL": "###",
-      "deleted": false,
+      "deleted": true,
       "id": 3
     },
     {
@@ -29,7 +29,7 @@
       "description": "サンプル説明文",
       "price": 9999,
       "imageURL": "###",
-      "deleted": false,
+      "deleted": true,
       "id": 4
     },
     {

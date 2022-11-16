@@ -1,10 +1,12 @@
 import useSWR from "swr";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const fetcher = (resource) => fetch(resource).then((res) => res.json());
 
 const ItemList = () => {
   const { data, error } = useSWR("/api/items", fetcher);
+  const router = useRouter();
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
@@ -41,6 +43,7 @@ const ItemList = () => {
                       body: JSON.stringify({ deleted: true }),
                       headers: { "Content-Type": "application/json" },
                     });
+                    router.reload();
                   }}
                 >
                   削除
