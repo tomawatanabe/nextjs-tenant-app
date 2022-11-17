@@ -1,4 +1,6 @@
-import { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
+import Link from "next/link";
+import Head from "next/head";
 
 const Create = () => {
   const [itemName, setItemName] = useState("");
@@ -34,11 +36,12 @@ const Create = () => {
         description: itemDescription,
         price: Number(itemPrice),
         imageURL: itemImageURL,
-        deleted:false,
+        deleted: false,
       }),
     });
   };
 
+  //登録時の処理
   const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
     postData();
     alert("商品を登録しました");
@@ -47,8 +50,12 @@ const Create = () => {
 
   return (
     <>
+      <Head>
+        <title>新規商品登録</title>
+      </Head>
+      <Link href={"http://localhost:3000/"}>[商品一覧]</Link>
       <form action="">
-        <legend>商品登録</legend>
+        <legend>新規商品登録</legend>
         <label htmlFor="item-name">商品名：</label>
         <input
           type="text"
@@ -76,7 +83,7 @@ const Create = () => {
           onChange={handleChangeItemPrice}
         ></input>
         <br />
-        <label htmlFor="item-image-url">U R L ：</label>
+        <label htmlFor="item-image-url">画　像：</label>
         <input
           type="text"
           placeholder="画像のURL"

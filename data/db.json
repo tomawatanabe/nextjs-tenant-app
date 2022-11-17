@@ -3,66 +3,34 @@
     {
       "id": 1,
       "name": "ピザ",
-      "description": "ピザです",
-      "price": 2000,
-      "imageURL": "#",
-      "deleted": true
+      "description": "非常によいピザ",
+      "price": 8000,
+      "imageURL": "/pizza.png",
+      "deleted": false
     },
     {
       "id": 2,
       "name": "パスタ",
-      "description": "パスタです",
+      "description": "非常に良いパスタ",
       "price": 1200,
-      "imageURL": "#",
-      "deleted": true
+      "imageURL": "/pasta.png",
+      "deleted": false
     },
     {
-      "name": "サンプル商品名",
-      "description": "サンプル説明文",
-      "price": 9999,
-      "imageURL": "###",
-      "deleted": true,
+      "name": "グラタン",
+      "description": "非常に良いグラタン",
+      "price": 980,
+      "imageURL": "/guratan.png",
+      "deleted": false,
       "id": 3
     },
     {
-      "name": "サンプル商品名",
-      "description": "サンプル説明文",
-      "price": 9999,
-      "imageURL": "###",
-      "deleted": true,
+      "name": "パンケーキ",
+      "description": "非常に良いパンケーキ",
+      "price": 700,
+      "imageURL": "/pancake.png",
+      "deleted": false,
       "id": 4
-    },
-    {
-      "name": "サンプル商品名",
-      "description": "サンプル説明文",
-      "price": 9999,
-      "imageURL": "###",
-      "deleted": true,
-      "id": 5
-    },
-    {
-      "name": "ドリア",
-      "description": "おいしいドリアです",
-      "price": 800,
-      "imageURL": "##",
-      "deleted": true,
-      "id": 6
-    },
-    {
-      "name": "ドリア",
-      "description": "おいしいドリアです",
-      "price": 800,
-      "imageURL": "##",
-      "deleted": true,
-      "id": 7
-    },
-    {
-      "name": "sample",
-      "description": "sample",
-      "price": 8988,
-      "imageURL": "sample",
-      "deleted": true,
-      "id": 8
     }
   ]
 }

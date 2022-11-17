@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { ReactElement } from "react";
+import Image from "next/image";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   //method:"GET"は省略可能
@@ -39,35 +41,52 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
 const Detail = ({ postData }: any): ReactElement => {
   return (
     <>
-      <Head>商品詳細</Head>
-      <table>
+      <Head><title>商品詳細</title></Head>
+      <Link href={"http://localhost:3000/"}>←商品一覧へ戻る</Link>
+      <table border={1}>
         <tbody>
           <tr>
-            <th>ID</th>
-            <td>{postData.id}</td>
+            <th colSpan={2}>商品詳細</th>
           </tr>
           <tr>
-            <th>名前</th>
+            <td>ID</td>
+            <td>{postData.id}</td>
+            {/* <td><input type="button"></input></td> */}
+          </tr>
+          <tr>
+            <td>名前</td>
             <td>{postData.name}</td>
           </tr>
           <tr>
-            <th>価格</th>
+            <td>価格</td>
             <td>{postData.price}円</td>
           </tr>
           <tr>
-            <th>説明</th>
+            <td>説明</td>
             <td>{postData.description}</td>
           </tr>
           <tr>
-            <th>画像URL</th>
+            <td>画像</td>
+            <td>
+              <Image
+                width={40}
+                height={40}
+                src={`${postData.imageURL}`}
+                alt={"商品イメージ"}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>画像URL</td>
             <td>{postData.imageURL}</td>
           </tr>
           <tr>
-            <th>削除フラグ</th>
+            <td>削除フラグ</td>
             <td>{postData.deleted.toString()}</td>
           </tr>
         </tbody>
       </table>
+      <Link href={`http://localhost:3000/edits/${postData.id}`}>商品を編集する→</Link>
     </>
   );
 };
