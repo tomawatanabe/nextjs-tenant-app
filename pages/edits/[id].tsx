@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 import { useRouter } from "next/router";
-import Router from "next/dist/server/router";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("http://localhost:3000/api/items");

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "ピザ",
-      "description": "非常によいピザ",
+      "description": "非常に良いピザ",
       "price": 8000,
       "imageURL": "/pizza.png",
       "deleted": false

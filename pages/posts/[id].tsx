@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { ReactElement } from "react";
 import Image from "next/image";
+import QRCode from "qrcode.react";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   //method:"GET"は省略可能
@@ -41,7 +42,9 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
 const Detail = ({ postData }: any): ReactElement => {
   return (
     <>
-      <Head><title>商品詳細</title></Head>
+      <Head>
+        <title>商品詳細</title>
+      </Head>
       <Link href={"http://localhost:3000/"}>←商品一覧へ戻る</Link>
       <table border={1}>
         <tbody>
@@ -84,9 +87,18 @@ const Detail = ({ postData }: any): ReactElement => {
             <td>削除フラグ</td>
             <td>{postData.deleted.toString()}</td>
           </tr>
+          <tr>
+            <td>QRコード</td>
+            <td>
+              <QRCode value={`${postData.name}は${postData.description}です`} />
+              <QRCode value={`https://ja.wikipedia.org/wiki/%E3%83%94%E3%82%B6`} />
+            </td>
+          </tr>
         </tbody>
       </table>
-      <Link href={`http://localhost:3000/edits/${postData.id}`}>商品を編集する→</Link>
+      <Link href={`http://localhost:3000/edits/${postData.id}`}>
+        商品を編集する→
+      </Link>
     </>
   );
 };

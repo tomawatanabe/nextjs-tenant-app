@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Test from "../components/Test";
 
 const Create = () => {
   const [itemName, setItemName] = useState("");
@@ -24,32 +25,31 @@ const Create = () => {
     setItemImageURL(e.target.value);
   };
 
-  //postする処理
-  const postData = async () => {
-    fetch("api/items", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: itemName,
-        description: itemDescription,
-        price: Number(itemPrice),
-        imageURL: itemImageURL,
-        deleted: false,
-      }),
-    });
-  };
-
-  //登録時の処理
-  const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
-    postData();
-    alert("商品を登録しました");
-    // e.preventDefault();
+  //入力チェック後、postする処理
+  const handleClick = () => {
+    if (!itemName || !itemDescription) {
+      alert("価格か説明文が未登録です！");
+    } else {
+      fetch("api/items", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: itemName,
+          description: itemDescription,
+          price: Number(itemPrice),
+          imageURL: itemImageURL,
+          deleted: false,
+        }),
+      });
+      alert("商品を登録しました");
+    }
   };
 
   return (
     <>
+      <Test />
       <Head>
         <title>新規商品登録</title>
       </Head>

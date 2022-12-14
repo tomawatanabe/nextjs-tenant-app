@@ -15,7 +15,7 @@ const FalseButton = () => {
       <button
         onClick={() => {
           data.map((item) => {
-            fetch(`http://localhost:3000/api/items/${item.id}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API}/API/items/${item.id}`, {
               method: "PATCH",
               body: JSON.stringify({ deleted: false }),
               headers: { "Content-Type": "application/json" },
