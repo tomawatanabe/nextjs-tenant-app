@@ -1,8 +1,36 @@
 {
   "items": [
     {
-      "name": "商品1",
-      "id": 1
+      "id": 1,
+      "name": "ピザ",
+      "description": "非常に良いピザ",
+      "price": 8000,
+      "imageURL": "/pizza.png",
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "name": "パスタ",
+      "description": "非常に良いパスタ",
+      "price": 1200,
+      "imageURL": "/pasta.png",
+      "deleted": false
+    },
+    {
+      "name": "グラタン",
+      "description": "非常に良いグラタン",
+      "price": 980,
+      "imageURL": "/guratan.png",
+      "deleted": false,
+      "id": 3
+    },
+    {
+      "name": "パンケーキ",
+      "description": "非常に良いパンケーキ",
+      "price": 700,
+      "imageURL": "/pancake.png",
+      "deleted": false,
+      "id": 4
     }
   ]
 }
